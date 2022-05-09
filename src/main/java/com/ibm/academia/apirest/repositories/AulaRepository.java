@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface AulaRepository extends CrudRepository<Aula, Integer>
 {
@@ -32,7 +34,8 @@ public interface AulaRepository extends CrudRepository<Aula, Integer>
         por parámetro, el cual debe de realizarse a través de Query Method.
      */
 
-
+    @Query("select a from Aula a where a.id =?1")
+    public Optional<Aula> findAulaById(Integer id);
 
 
 }
