@@ -1,5 +1,6 @@
 package com.ibm.academia.apirest.models.entities;
 
+import com.ibm.academia.apirest.enums.Pizarron;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
