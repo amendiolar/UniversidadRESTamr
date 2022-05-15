@@ -27,4 +27,8 @@ public interface PabellonRepository
 
     @Query("select p from Pabellon p where p.nombre = ?1")
     Optional<Pabellon> BuscarPabellonPorNombre (Pabellon nombre);
+
+    Iterable<Pabellon> findPabellonesByNombreContains(String nombre);
+
+    Iterable<Pabellon> findPabellonesByNombreContainsIgnoreCase(String nombre);
 }
